@@ -23,6 +23,10 @@ end
 
 def select_name_and_series_subgenres_of_authors
   "Write your SQL query here"
+  "SELECT authors.name, subgenres.name
+  FROM series
+  LEFT OUTER JOIN subgenres ON series.subgenre_id = subgenres.id
+  LEFT OUTER JOIN authors ON series.author_id = authors.id"
 end
 
 def select_series_title_with_most_human_characters
